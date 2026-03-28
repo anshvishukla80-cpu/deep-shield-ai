@@ -2,15 +2,11 @@ FROM python:3.11-slim
 
 WORKDIR /app
 
-# Install libGL for OpenCV (required by facenet-pytorch)
-RUN apt-get update && \
-    apt-get install -y --no-install-recommends libgl1 libglib2.0-0 && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/*
-
 # Copy requirements first for Docker layer caching
 COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt && \
+    pip uninstall -y opencv-python 2>/dev/null; \
+    pip install --no-cache-dir opencv-python-headless==4.8.1.78
 
 # Copy the application code
 COPY . .
