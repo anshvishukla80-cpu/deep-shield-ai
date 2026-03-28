@@ -4,9 +4,10 @@ WORKDIR /app
 
 # Copy requirements first for Docker layer caching
 COPY requirements.txt .
+
+# Install all deps, then force-replace opencv with headless version
 RUN pip install --no-cache-dir -r requirements.txt && \
-    pip uninstall -y opencv-python 2>/dev/null; \
-    pip install --no-cache-dir opencv-python-headless==4.8.1.78
+    pip install --no-cache-dir --force-reinstall opencv-python-headless==4.8.1.78
 
 # Copy the application code
 COPY . .
