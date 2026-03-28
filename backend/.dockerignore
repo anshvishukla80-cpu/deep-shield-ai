@@ -1,0 +1,14 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.env
+
+# Dataset (too large for deployment)
+dataset/
+
+# Temp files
+temp_*
+
+# OS
+.DS_Store

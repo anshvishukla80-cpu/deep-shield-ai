@@ -1,0 +1,23 @@
+DeepGuard — Evaluation Report
+============================================================
+
+CONFUSION MATRIX
+                  Predicted
+                Real    Fake
+  Actual Real     935      65
+  Actual Fake      46     954
+
+Accuracy:    94.45%
+Precision:   93.62%
+Recall:      95.40%
+F1-Score:    94.50%
+Specificity: 93.50%
+
+              precision    recall  f1-score   support
+
+        Real       0.95      0.94      0.94      1000
+        Fake       0.94      0.95      0.95      1000
+
+    accuracy                           0.94      2000
+   macro avg       0.94      0.94      0.94      2000
+weighted avg       0.94      0.94      0.94      2000

@@ -1,0 +1,23 @@
+# ==== OS Files ====
+.DS_Store
+Thumbs.db
+
+# ==== Python ====
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.env
+
+# ==== Node.js ====
+node_modules/
+
+# ==== Dataset (6.8GB — too large for GitHub) ====
+backend/dataset/
+
+# ==== Temp files ====
+temp_*
+
+# ==== IDE ====
+.vscode/
+.idea/
